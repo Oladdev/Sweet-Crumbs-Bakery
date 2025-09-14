@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Crumbs Bakery|Repo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8c87b7234d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+              <img
+          src="./Images/Logo.jpg"
+          alt="Sweet Crumbs Bakery Logo"
+          style="width: 100px; height: auto"
+        />
+        <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu </a>
+        <a href="orderpage.html">Order Online</a>
+        <div class="side-menu">
+          <button class="dropdown-menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="gallery.html">Gallery</a>
+          <a href="events.html">Catering and Events</a>
+          <a href="">Seasonal Specials</a>
+          <a href="">Customer Reviews</a>
+          <a href="">Contact Us</a>
+          <a href="">FAQs</a>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <h4>#THEBESTBAKERY</h4>
+      <h1>We Bake With Passion</h1>
+      <p>
+        Sweet Crumbs Bakery freshly baked treats made with love. From breads tp
+        cupcakes we bring you sweet moments in every bite.
+      </p>
+      <button>Read More</button>
+    </section>
+  </body>
+  <script>
+    document.querySelector('.dropdown-menu').addEventListener('click', function() {
+      var dropdownContent = document.querySelector('.dropdown-content');
+      if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+      } else {
+        dropdownContent.style.display = 'block';
+      }
+    });
+
+  </script>
+</html>
