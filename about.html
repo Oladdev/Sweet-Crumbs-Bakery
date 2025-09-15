@@ -4,25 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Crumbs Bakery|About Us</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <nav>
-      <a href=""
-        ><img
-          src="./Images/Logo.jpg"
-          alt="Sweet Crumbs Bakery Logo"
-          style="width: 100px; height: auto"
-      /></a>
-      <a href="">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="menu.html">Menu</a>
-      <a href="">Order Online</a>
-      <a href="">Gallery</a>
-      <a href="">Catering and Events</a>
-      <a href="">Seasonal Specials</a>
-      <a href="">Customer Reviews</a>
-      <a href="">Contact Us</a>
-      <a href="">FAQs</a>
+      <img
+        src="./Images/Logo.jpg"
+        alt="Sweet Crumbs Bakery Logo"
+        style="width: 100px; height: auto"
+      />
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="orderpage.html">Order Online</a>
+        <a href="gallery.html">Gallery</a>
+
+        <!-- Mega Menu -->
+        <div class="mega-menu">
+          <a href="#" id="mega-toggle" class="mega-link">
+            More <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="mega-content">
+            <div class="mega-column">
+              <h4>Services</h4>
+              <a href="events.html">Catering and Events</a>
+              <a href="#">Seasonal Specials</a>
+            </div>
+            <div class="mega-column">
+              <h4>Community</h4>
+              <a href="#">Customer Reviews</a>
+              <a href="#">FAQs</a>
+            </div>
+            <div class="mega-column">
+              <h4>Contact</h4>
+              <a href="#">Contact Us</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
     <section>
       <h1>About us</h1>
@@ -71,9 +92,8 @@
         Visit us at Sweete Crumbs Bakery or order online to experience the
         warmth of our bakery. Let’s create delicious memories together!
       </p>
+      <a href="./about.html" class="btn">Visit Us</a>
     </section>
-    <img src="./Images/bakeint.png" alt="" srcset="" />
-    <button>Visit Us</button>
     <footer>
       <p>Sweet Crumbs Bakery| 123 Main Street, Anytown, USA 12345”</p>
       <div class="social-icons">
@@ -92,4 +112,28 @@
       </div>
     </footer>
   </body>
+  <script>
+    const toggleBtn = document.getElementById("mega-toggle");
+    const megaContent = document.querySelector(".mega-content");
+    const icon = toggleBtn.querySelector("i");
+
+    toggleBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // stop link jump
+      if (megaContent.style.display === "grid") {
+        megaContent.style.display = "none";
+        icon.style.transform = "rotate(0deg)"; // back to normal
+      } else {
+        megaContent.style.display = "grid";
+        icon.style.transform = "rotate(180deg)"; // rotated down
+      }
+    });
+
+    // Optional: close when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".mega-menu")) {
+        megaContent.style.display = "none";
+        icon.style.transform = "rotate(0deg)";
+      }
+    });
+  </script>
 </html>
