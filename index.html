@@ -22,14 +22,13 @@
         <a href="about.html">About Us</a>
         <a href="menu.html">Menu </a>
         <a href="orderpage.html">Order Online</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Catering and Events</a>
         <div class="side-menu">
           <button class="dropdown-menu">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-chevron-down"></i>
+            More <i class="fa-solid fa-bars"></i>
           </button>
           <div class="dropdown-content">
-            <a href="gallery.html">Gallery</a>
-          <a href="events.html">Catering and Events</a>
           <a href="">Seasonal Specials</a>
           <a href="">Customer Reviews</a>
           <a href="">Contact Us</a>
@@ -48,14 +47,21 @@
     </section>
   </body>
   <script>
-    document.querySelector('.dropdown-menu').addEventListener('click', function() {
-      var dropdownContent = document.querySelector('.dropdown-content');
-      if (dropdownContent.style.display === 'block') {
-        dropdownContent.style.display = 'none';
-      } else {
-        dropdownContent.style.display = 'block';
-      }
-    });
+     const dropdownBtn = document.querySelector('.dropdown-menu');
+      const dropdownContent = document.querySelector('.dropdown-content');
+      const icon = dropdownBtn.querySelector('i'); // the icon inside button
+
+      dropdownBtn.addEventListener('click', function () {
+        if (dropdownContent.style.display === 'block') {
+          dropdownContent.style.display = 'none';
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-bars');
+        } else {
+          dropdownContent.style.display = 'block';
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-chevron-down');
+        }
+      });
 
   </script>
 </html>

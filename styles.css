@@ -17,12 +17,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 10px 20px;
 }
 
 .nav-links {
+  flex: 1;
   display: flex;
-  gap: 40px;
+  justify-content: space-evenly; /* center the links horizontally */
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links a {
