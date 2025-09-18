@@ -64,27 +64,17 @@
   </body>
 
   <script>
-    const toggleBtn = document.getElementById("mega-toggle");
-    const megaContent = document.querySelector(".mega-content");
-    const icon = toggleBtn.querySelector("i");
+    const menu = document.querySelector(".mega-menu");
+    const toggle = menu.querySelector("#mega-toggle");
 
-    toggleBtn.addEventListener("click", function (e) {
-      e.preventDefault(); // stop link jump
-      if (megaContent.style.display === "grid") {
-        megaContent.style.display = "none";
-        icon.style.transform = "rotate(0deg)"; // back to normal
-      } else {
-        megaContent.style.display = "grid";
-        icon.style.transform = "rotate(180deg)"; // rotated down
-      }
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      menu.classList.toggle("open");
     });
 
-    // Optional: close when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".mega-menu")) {
-        megaContent.style.display = "none";
-        icon.style.transform = "rotate(0deg)";
-      }
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target)) menu.classList.remove("open");
     });
   </script>
 </html>

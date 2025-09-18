@@ -54,8 +54,15 @@ nav {
   position: relative;
 }
 
+.mega-link i {
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
 .mega-content {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
   position: absolute;
   top: 120%;
   left: 0;
@@ -68,6 +75,21 @@ nav {
   gap: 20px;
   border-radius: 0.5rem;
   z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* show when JS adds .open */
+.mega-menu.open .mega-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* rotate icon when open */
+.mega-menu.open .mega-link i {
+  transform: rotate(180deg);
 }
 
 .mega-column h4 {
@@ -86,32 +108,41 @@ nav {
 .mega-column a:hover {
   color: #e8cfae;
 }
-.mega-link i {
-  transition: transform 0.3s ease;
-}
 
 /* Hero Section */
 section {
-  padding-top: 100px;
+  padding: 120px 20px; /* more breathing room */
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto; /* center content */
+  background: rgba(0, 0, 0, 0.4); /* soft overlay for readability */
+  border-radius: 1rem;
 }
 
-h4 {
+section h4 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e8cfae;
+}
+
+section h1 {
+  font-size: 3.5rem;
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1.5rem;
+section p {
+  font-size: 1.2rem;
   margin-bottom: 30px;
   color: #f4f0eb;
+  line-height: 1.6;
 }
 
+/* Call-to-action button */
 section .btn {
   text-decoration: none;
   background-color: #a6652a;
@@ -123,8 +154,14 @@ section .btn {
   display: inline-block;
   font-weight: 500;
   transition: background-color 0.3s ease;
+  cursor: pointer; /* makes it clickable */
+  position: relative; /* ensures it sits above overlaps */
+  z-index: 10; /* prevents nav/hero overlap */
 }
 
 section .btn:hover {
   background-color: #8c4b1a;
+  transform: translateY(-3px); /* smooth lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
+/*-------------------------- ABOUT PAGE ----------------------------- */
