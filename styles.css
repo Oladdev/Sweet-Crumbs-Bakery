@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 
 body {
   font-family: "Libertinus Sans", sans-serif;
-  background: url("Images/Backg.jpg") no-repeat;
+  background: url("Images/Backg.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
   color: #f2f2f2;
@@ -84,8 +84,6 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
-
-
 
 /* rotate icon when open */
 .mega-menu.open .mega-link i {
@@ -165,3 +163,54 @@ section .btn:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 /*-------------------------- ABOUT PAGE ----------------------------- */
+
+/*-------------------------- MENU PAGE ----------------------------- */
+header h1 {
+  font-family: "Lora", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 3.5rem;
+}
+.menu-section {
+  color: #a6652a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-item {
+  width: 1000px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #E8CFAE;;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.menu-item img {
+  width: 180px;
+  height: 150px;
+  padding: 20px 30px;
+  border-radius: 45px;
+}
+.right {
+  padding: 30px 20px;
+  color: #2c2c2c;
+}
+
+.right p {
+  font-size: 20px;
+}
+
+.right h2,
+.right p {
+  margin-bottom: 0.5rem; /* adds space between elements */
+}
+.right p:last-child {
+  margin-bottom: 0; /* remove extra gap after last */
+}
