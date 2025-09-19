@@ -141,7 +141,7 @@ section p {
 }
 
 /* Call-to-action button */
-section .btn {
+.btn {
   text-decoration: none;
   background-color: #a6652a;
   color: #f4f0eb;
@@ -163,7 +163,17 @@ section .btn:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 /*-------------------------- ABOUT PAGE ----------------------------- */
-
+footer {
+  background-color: #d59a5b;
+  text-align: center;
+  padding: 10px 1px;
+  font-size: 1rem;
+}
+.social-icons a {
+  text-decoration: none;
+  color: #e8cfae;
+  font-size: 1.2rem;
+}
 /*-------------------------- MENU PAGE ----------------------------- */
 header h1 {
   font-family: "Lora", serif !important;
@@ -175,7 +185,7 @@ header h1 {
   font-size: 3.5rem;
 }
 .menu-section {
-  color: #a6652a;
+  color: #f4f0eb;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -187,7 +197,7 @@ header h1 {
   height: 150px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  background-color: #E8CFAE;;
+  background-color: #e8cfae;
   margin: 20px;
   display: flex;
   flex-direction: row;
@@ -200,9 +210,13 @@ header h1 {
 }
 .right {
   padding: 30px 20px;
-  color: #2c2c2c;
+  color: #a6652a;
 }
 
+.price {
+  color: #f2f2f2;
+  font-weight: 900;
+}
 .right p {
   font-size: 20px;
 }
