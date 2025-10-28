@@ -185,7 +185,6 @@ header h1 {
   font-size: 3.5rem;
 }
 .menu-section {
-  color: #f4f0eb;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -242,11 +241,40 @@ header h1 {
 }
 /* Order Page*/
 
-.product {
+.product-section {
+  color: #f4f0eb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-item {
+  width: 1000px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #e8cfae;
+  margin: 20px;
+  display: flex;
+}
+
+/* .product {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   justify-content: center;
   padding: 20px;
+  background-color: #e8cfae;
+  width: 1000px;
+  border-radius: 20px;
+  margin: 20px;
+} */
+.product-info {
+  font-size: 1.5rem;
+  color: #6a4e4c;
+}
+.product-info h3 {
+  color: #8c4b1a;
   font-size: 2rem;
 }
