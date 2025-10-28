@@ -141,7 +141,7 @@ section p {
 }
 
 /* Call-to-action button */
-.btn {
+section .btn {
   text-decoration: none;
   background-color: #a6652a;
   color: #f4f0eb;
@@ -166,7 +166,7 @@ section .btn:hover {
 footer {
   background-color: #d59a5b;
   text-align: center;
-  padding: 10px 1px;
+  padding: 7px 1px;
   font-size: 1rem;
 }
 .social-icons a {
@@ -194,37 +194,59 @@ header h1 {
 }
 .menu-item {
   width: 1000px;
-  height: 150px;
+  height: 200px;
   border: 1px solid #ccc;
   border-radius: 20px;
   background-color: #e8cfae;
   margin: 20px;
   display: flex;
-  flex-direction: row;
 }
 .menu-item img {
-  width: 180px;
-  height: 150px;
-  padding: 20px 30px;
-  border-radius: 45px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 70px;
+  object-fit: cover;
 }
-.right {
-  padding: 30px 20px;
-  color: #a6652a;
+.menu-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu-details h2 {
+  font-family: "Lora", serif !important;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.cart {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.price {
-  color: #f2f2f2;
-  font-weight: 900;
+.cart button {
+  background-color: #a6652a;
+  color: #f4f0eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
 }
-.right p {
-  font-size: 20px;
-}
+/* Order Page*/
 
-.right h2,
-.right p {
-  margin-bottom: 0.5rem; /* adds space between elements */
-}
-.right p:last-child {
-  margin-bottom: 0; /* remove extra gap after last */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  font-size: 2rem;
 }

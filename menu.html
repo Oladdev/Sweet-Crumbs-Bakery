@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Crumbs Bakery|Our Menu</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8c87b7234d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -49,26 +53,27 @@
     <div class="menu-section">
       <h1>Breads</h1>
       <div class="menu-item">
-        <div class="left">
-          <img src="./Images/Sourdough Bread.jpg" alt="" />
-        </div>
-        <div class="right">
+        <img src="./Images/Sourdough Bread.jpg" alt="" />
+        <div class="menu-details">
           <h2>Sourdough Bread</h2>
           <p>
             Crusty, tangy, and made with our signature starter. Perfect for
             sandwiches or toast.
           </p>
-          <p>$5.00</p>
+          <p class="price">$5.00</p>
+        </div>
+        <div class="cart">
+          <button id="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
         </div>
       </div>
       <div class="menu-item">
         <div class="left">
-          <img src="./Images/Sourdough Bread.jpg" alt="" />
+          <img src="./Images/Baguette.jpg" alt="" />
         </div>
         <div class="right">
           <h2>Classic Baguette</h2>
           <p>Golden crust with asoft, airy interior. A French staple!</p>
-          <p>$3.50</p>
+          <p class="price">$3.50</p>
         </div>
       </div>
     </div>
@@ -81,7 +86,7 @@
         <div class="right">
           <h2>Butter Croissant</h2>
           <p>Flaky, buttery layers baked to golden perfection.</p>
-          <p>$2.50</p>
+          <p class="price">$2.50</p>
         </div>
       </div>
       <div class="menu-item">
@@ -91,7 +96,7 @@
         <div class="right">
           <h2>Fruit Danish</h2>
           <p>Sweet pastry filled with seasonal fruit and a drizzle of glaze</p>
-          <p>$3.00</p>
+          <p class="price">$3.00</p>
         </div>
       </div>
     </div>
@@ -104,7 +109,7 @@
         <div class="right">
           <h2>Chocolate Cupcake</h2>
           <p>Moist chocolate cupcake topped with rich chocolate frosting.</p>
-          <p>$5.00</p>
+          <p class="price">$5.00</p>
         </div>
       </div>
       <div class="menu-item">
@@ -114,7 +119,7 @@
         <div class="right">
           <h2>Vanilla Cupcake</h2>
           <p>Light and fluffy vanilla cupcake with creamy vanilla icing.</p>
-          <p>$2.50</p>
+          <p class="price">$2.50</p>
         </div>
       </div>
       <div class="menu-item">
@@ -124,7 +129,7 @@
         <div class="right">
           <h2>Cherry Cupcake</h2>
           <p>Moist cherry cupcake topped with rich frosting.</p>
-          <p>$5.00</p>
+          <p class="price">$5.00</p>
         </div>
       </div>
       <div class="menu-item">
@@ -134,7 +139,7 @@
         <div class="right">
           <h2>Stawberry Cupcake</h2>
           <p>Light and fluffy stawberry cupcake with creamy icing.</p>
-          <p>$2.50</p>
+          <p class="price">$2.50</p>
         </div>
       </div>
     </div>
@@ -147,7 +152,7 @@
         <div class="right">
           <h2>Chocolate Layer Cake</h2>
           <p>Rich chocolate sponge with creamy ganache frosting.</p>
-          <p>$35.00(Whole)/$5.00(Slice)</p>
+          <p class="price">$35.00(Whole)/$5.00(Slice)</p>
         </div>
       </div>
       <div class="menu-item">
@@ -157,7 +162,7 @@
         <div class="right">
           <h2>Lemon Raspberry Cake</h2>
           <p>Tangy lemon sponge with raspberry filling and buttercream</p>
-          <p>$38.00(Whole)/$5.50(Slice)</p>
+          <p class="price">$38.00(Whole)/$5.50(Slice)</p>
         </div>
       </div>
     </div>
@@ -170,7 +175,7 @@
         <div class="right">
           <h2>Artisan Coffee</h2>
           <p>Locally roasted beans, brewed fresh daily.</p>
-          <p>$5.00</p>
+          <p class="price">$5.00</p>
         </div>
       </div>
       <div class="menu-item">
@@ -180,11 +185,11 @@
         <div class="right">
           <h2>Herbal Tea</h2>
           <p>A soothing blend of chamomile and mint</p>
-          <p>$2.50</p>
+          <p class="price">$2.50</p>
         </div>
       </div>
     </div>
-    <button>Order Now</button>
+    <a class="btn">Order Now</button>
     <footer>
       <p>Sweet Crumbs Bakery| 123 Main Street, Anytown, USA 12345”</p>
       <div class="social-icons">
@@ -203,4 +208,20 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    const menu = document.querySelector(".mega-menu");
+    const toggle = menu.querySelector("#mega-toggle");
+
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      menu.classList.toggle("open");
+    });
+
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target)) menu.classList.remove("open");
+    });
+  </script>
+
 </html>
