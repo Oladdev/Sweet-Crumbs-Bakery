@@ -247,9 +247,13 @@ header h1 {
   gap: 8px;
   transition: background-color 0.3s ease;
 }
-/* Order Page*/
+
+/****************** Order Page***************/
 
 .product-section {
+  /* background-color: #a6652a; */
+  max-width: 1500px;
+  box-shadow: #8c4b1a;
   color: #f4f0eb;
   padding: 20px;
   display: flex;
@@ -257,32 +261,39 @@ header h1 {
   align-items: center;
   justify-content: center;
 }
-/* .menu-item {
-  width: 1000px;
-  height: 200px;
+.product-container {
+  height: auto;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 40px;
   background-color: #e8cfae;
   margin: 20px;
+  padding: 20px;
   display: flex;
-} */
+  flex-direction: column;
+}
 
-/* .product {
+.product {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
   justify-content: center;
   padding: 20px;
   background-color: #e8cfae;
-  width: 1000px;
   border-radius: 20px;
   margin: 20px;
-} */
+}
+
 .product-info {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #6a4e4c;
 }
+
 .product-info h3 {
   color: #8c4b1a;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product button {
+  height: 20px;
 }

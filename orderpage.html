@@ -50,8 +50,9 @@
       </div>
     </nav>
     <div class="product-section">
-      <header><h1>Make your Order</h1></header>
-    <div class="product">
+      <h1>Make your Order</h1>
+    <div class="product-container">
+      <div class="product">
         <div class="product-info">
             <h3>Bread</h3>
             <p>Freshly baked bread with a crispy crust and soft interior.</p>
@@ -126,5 +127,24 @@
         <button>Add to Cart</button>
     </div>
     </div>
+    </div>
 </body>
+
+
+  <script>
+    const menu = document.querySelector(".mega-menu");
+    const toggle = menu.querySelector("#mega-toggle");
+
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      menu.classList.toggle("open");
+    });
+
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target)) menu.classList.remove("open");
+    });
+  </script>
+
+</html>
 </html>
