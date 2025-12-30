@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Crumbs Bakery|Gallery Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav>
+      <img
+        src="./Images/Logo.jpg"
+        alt="Sweet Crumbs Bakery Logo"
+        style="width: 100px; height: auto"
+      />
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="orderpage.html">Order Online</a>
+        <a href="gallery.html">Gallery</a>
+        <!-- Mega Menu -->
+        <div class="mega-menu">
+          <a href="#" id="mega-toggle" class="mega-link">
+            More <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="mega-content">
+            <div class="mega-column">
+              <h4>Services</h4>
+              <a href="events.html">Catering and Events</a>
+              <a href="#">Seasonal Specials</a>
+            </div>
+            <div class="mega-column">
+              <h4>Community</h4>
+              <a href="#">Customer Reviews</a>
+              <a href="#">FAQs</a>
+            </div>
+            <div class="mega-column">
+              <h4>Contact</h4>
+              <a href="#">Contact Us</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <h3>Bread Collection</h3>
+          <img src="./Images/Sourdough Bread.jpg" alt="">
+          <img src="./Images/Baguette.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <h3>Pastry Collection</h3>
+          <img src="./Images/Croissant.jpeg" alt="">
+          <img src="./Images/Danish.jpeg" alt="">
+        </div>
+        <div class="gallery-item">
+          <h3>Cupcake Collection</h3>
+          <img src="./Images/choclate cake.jpeg" alt="">
+          <img src="./Images/vanilla cupcake.jpg" alt="">
+          <img src="./Images/cherrycc.jpeg" alt="">
+          <img src="./Images/cupcake.jpeg" alt="">
+        </div>
+        <div class="gallery-item">
+          <h3>Cake Collection</h3>
+          <img src="./Images/choclate cake.jpeg" alt="">
+          <img src="./Images/Lemon cake.jpeg" alt="">
+          <img src="./Images/Drip cake.jpg" alt="">
+          <img src="./Images/Oreo drip cake.jpg" alt="">
+          <img src="./Images/goat cake.jpg" alt="">
+          <img src="./Images/Pink cat cake.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <h3>Beverage Collection</h3>
+          <img src="./Images/Artisan coffee.jpeg" alt="">
+          <img src="./Images/Herbal Tea.jpeg" alt="">
+        </div>
+
+    </section>
+  </body>
+
+<script>
+    const menu = document.querySelector(".mega-menu");
+    const toggle = menu.querySelector("#mega-toggle");
+
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      menu.classList.toggle("open");
+    });
+
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target)) menu.classList.remove("open");
+    });
+  </script>
+
+
+</html>

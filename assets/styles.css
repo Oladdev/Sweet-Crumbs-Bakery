@@ -7,11 +7,16 @@
 
 body {
   font-family: "Libertinus Sans", sans-serif;
-  background: url("Images/Backg.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: center;
   color: #f2f2f2;
   min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("Images/Backg.jpg") center/cover no-repeat;
+  filter: blur(4px) brightness(0.6);
+  z-index: -1;
 }
 
 /* Navbar */
@@ -190,23 +195,33 @@ header h1 {
   align-items: center;
   justify-content: center;
 }
+.menu-section h1 {
+  font-size: 2rem;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #fff;
+}
+
 .menu-item {
-  width: 1000px;
-  height: 200px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  background-color: #e8cfae;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+  background: #f1dcc0;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px auto;
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 16px;
+  align-items: center;
 }
+
 .menu-item img {
-  width: 200px;
-  height: 200px;
-  padding: 10px;
-  border-radius: 70px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  border-radius: 12px;
 }
+
 .menu-details {
   padding: 20px;
   display: flex;
@@ -215,19 +230,24 @@ header h1 {
 }
 .menu-details h2 {
   font-family: "Lora", serif !important;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #6a4e3c;
+  font-size: 1.2rem;
+  color: #5a3a1e;
+  margin-bottom: 6px;
 }
+
 .menu-details p {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
+  font-size: 0.95rem;
+  color: #7a4a25;
+  margin-bottom: 4px;
+}
+
+.price {
   font-weight: 600;
-  font-size: 1.3rem;
-  font-style: normal;
   color: #8c4b1a;
 }
+
 .cart {
   display: flex;
   align-items: center;
@@ -235,17 +255,21 @@ header h1 {
 }
 
 .cart button {
-  background-color: #a6652a;
-  color: #f4f0eb;
+  background: #a6652a;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
+}
+
+.cart button:hover {
+  background: #8c4b1a;
 }
 
 /****************** Order Page***************/
@@ -265,7 +289,7 @@ header h1 {
   height: auto;
   border: 1px solid #ccc;
   border-radius: 40px;
-  background-color: #e8cfae;
+  background-color: #a6652a;
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -296,4 +320,25 @@ header h1 {
 
 .product button {
   height: 20px;
+}
+
+/****************** Gallery ****************/
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-item {
+  padding: 10px;
+}
+
+.gallery-item h3 {
+  color: #8c4b1a;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery-item img {
+  width: 150px;
+  max-height: 150px;
 }
