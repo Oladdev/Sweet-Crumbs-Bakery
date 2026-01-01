@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Crumbs Bakery | Repo</title>
-    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <script
       src="https://kit.fontawesome.com/8c87b7234d.js"
       crossorigin="anonymous"
@@ -12,69 +13,59 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav>
+    <header>
       <img
-        src="./Images/Logo.jpg"
+        src="assets/Images/Logo.jpg"
         alt="Sweet Crumbs Bakery Logo"
-        style="width: 100px; height: auto"
+        loading="lazy"
       />
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="orderpage.html">Order Online</a>
-        <a href="gallery.html">Gallery</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="orderpage.html">Order Online</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
 
         <!-- Mega Menu -->
         <div class="mega-menu">
-          <a href="#" id="mega-toggle" class="mega-link">
-            More <i class="fa-solid fa-chevron-down"></i>
-          </a>
+          <li>
+            <a href="#" id="mega-toggle" class="mega-link">
+              More <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </li>
           <div class="mega-content">
             <div class="mega-column">
               <h4>Services</h4>
-              <a href="events.html">Catering and Events</a>
-              <a href="#">Seasonal Specials</a>
+              <li><a href="events.html">Catering and Events</a></li>
+              <li><a href="#">Seasonal Specials</a></li>
             </div>
             <div class="mega-column">
               <h4>Community</h4>
-              <a href="#">Customer Reviews</a>
-              <a href="#">FAQs</a>
+              <li><a href="#">Customer Reviews</a></li>
+              <li><a href="#">FAQs</a></li>
             </div>
             <div class="mega-column">
               <h4>Contact</h4>
-              <a href="#">Contact Us</a>
-              <a href="#">Careers</a>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Careers</a></li>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section>
-      <h4>#THEBESTBAKERY</h4>
-      <h1>We Bake With Passion</h1>
-      <p>
-        Sweet Crumbs Bakery – freshly baked treats made with love. From breads
-        to cupcakes, we bring you sweet moments in every bite.
-      </p>
-      <a href="./about.html" class="btn">Read More</a>
-    </section>
+    <main>
+      <section class="hero">
+        <h4>#THEBESTBAKERY</h4>
+        <h1>We Bake With Passion</h1>
+        <p>
+          Sweet Crumbs Bakery – freshly baked treats made with love. From breads
+          to cupcakes, we bring you sweet moments in every bite.
+        </p>
+        <a href="./about.html" class="btn">Read More</a>
+      </section>
+    </main>
+    <script src="assets/js/nav.js"></script>
   </body>
-
-  <script>
-    const menu = document.querySelector(".mega-menu");
-    const toggle = menu.querySelector("#mega-toggle");
-
-    toggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      menu.classList.toggle("open");
-    });
-
-    // close when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target)) menu.classList.remove("open");
-    });
-  </script>
 </html>

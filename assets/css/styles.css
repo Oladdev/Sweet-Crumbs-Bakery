@@ -14,20 +14,22 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("Images/Backg.jpg") center/cover no-repeat;
+  background: url("../Images/Backg.jpg") center/cover no-repeat;
   filter: blur(4px) brightness(0.6);
   z-index: -1;
 }
-
-/* Navbar */
-nav {
+/************************* Navbar *******************************/
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 20px;
   position: relative;
 }
-
+header img {
+  width: 100px;
+  height: auto;
+}
 .nav-links {
   flex: 1;
   display: flex;
@@ -36,7 +38,7 @@ nav {
   gap: 1.5rem;
 }
 
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
   background-color: #a6652a;
   color: #f4f0eb;
@@ -111,6 +113,7 @@ nav {
   color: #e8cfae;
 }
 
+/*-------------------------- HOME PAGE ----------------------------- */
 /* Hero Section */
 section {
   padding: 120px 20px; /* more breathing room */
