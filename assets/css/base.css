@@ -36,6 +36,8 @@ header img {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  list-style-type: none;
+  text-align: center;
 }
 
 .nav-links li a {
@@ -93,7 +95,7 @@ header img {
 
 /* rotate icon when open */
 .mega-menu.open .mega-link i {
-  transform: rotate(180deg);
+  transform: rotate(310deg);
 }
 
 .mega-column h4 {
