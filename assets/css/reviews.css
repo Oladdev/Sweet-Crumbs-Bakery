@@ -1,0 +1,55 @@
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: rgba(30, 15, 0, 0.7);
+}
+.customer-reviews {
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #f8cfa0;
+  background-color: rgba(255, 255, 255, 0.05);
+ margin: auto;
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 30px;
+  color: #ffcc99;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.review-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #f8cfa0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.review-text {
+  font-style: italic;
+  color: #fff9ec;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.review-author {
+  text-align: right;
+  font-weight: bold;
+  color: #ffdfba;
+  font-size: 14px;
+}f
