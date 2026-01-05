@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Crumbs Bakery|Our Menu</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/base.css">
     <script
       src="https://kit.fontawesome.com/8c87b7234d.js"
       crossorigin="anonymous"
@@ -12,44 +13,47 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav>
+    <header>
       <img
-        src="./Images/Logo.jpg"
+        src="../assets/Images/Logo.jpg"
         alt="Sweet Crumbs Bakery Logo"
-        style="width: 100px; height: auto"
+        loading="lazy"
       />
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="orderpage.html">Order Online</a>
-        <a href="gallery.html">Gallery</a>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/menu.html">Menu</a></li>
+        <li><a href="pages/orderpage.html">Order Online</a></li>
+        <li><a href="pages/gallery.html">Gallery</a></li>
+
         <!-- Mega Menu -->
         <div class="mega-menu">
-          <a href="#" id="mega-toggle" class="mega-link">
-            More <i class="fa-solid fa-chevron-down"></i>
-          </a>
+          <li>
+            <a href="#" id="mega-toggle" class="mega-link">
+              More <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </li>
           <div class="mega-content">
             <div class="mega-column">
               <h4>Services</h4>
-              <a href="events.html">Catering and Events</a>
-              <a href="#">Seasonal Specials</a>
+              <li><a href="pages/events.html">Catering and Events</a></li>
+              <li><a href="pages/specials">Seasonal Specials</a></li>
             </div>
             <div class="mega-column">
               <h4>Community</h4>
-              <a href="#">Customer Reviews</a>
-              <a href="#">FAQs</a>
+              <li><a href="pages/reviews.html">Customer Reviews</a></li>
+              <li><a href="pages/FAQ.html">FAQs</a></li>
             </div>
             <div class="mega-column">
               <h4>Contact</h4>
-              <a href="#">Contact Us</a>
-              <a href="#">Careers</a>
+              <li><a href="pages/contact.html">Contact Us</a></li>
+              <li><a href="pages/careers.html">Careers</a></li>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-    <header><h1>Our Menu</h1></header>
+    </header>
+    <header class="menu"><h1>Our Menu</h1></header>
 
     <div class="menu-section">      
       <h1>Breads</h1> 
