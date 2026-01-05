@@ -1,0 +1,20 @@
+/****************** Gallery ****************/
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-item {
+  padding: 10px;
+}
+
+.gallery-item h3 {
+  color: #8c4b1a;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery-item img {
+  width: 150px;
+  max-height: 150px;
+}
