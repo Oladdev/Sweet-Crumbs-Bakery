@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/gallery.css" />
   </head>
-  <body> -->
-<!-- Navigation -->
-<!-- <header>
+  <body>
+     <!-- Navigation -->
+<header>
       <img
         src="../assets/Images/Logo.jpg"
         alt="Sweet Crumbs Bakery Logo"
@@ -20,10 +20,10 @@
         <li><a href="pages/about.html">About Us</a></li>
         <li><a href="pages/menu.html">Menu</a></li>
         <li><a href="pages/orderpage.html">Order Online</a></li>
-        <li><a href="pages/gallery.html">Gallery</a></li> -->
+        <li><a href="pages/gallery.html">Gallery</a></li>
 
-<!-- Mega Menu -->
-<!-- <div class="mega-menu">
+        <!-- Mega Menu -->
+         <div class="mega-menu">
           <li>
             <a href="#" id="mega-toggle" class="mega-link">
               More <i class="fa-solid fa-chevron-down"></i>
@@ -48,9 +48,9 @@
           </div>
         </div>
       </div>
-    </header> -->
+    </header>
 
-<!-- <main>
+    <main>
 
       <div id="lightbox" tabindex="-1">
         <span class="close-btn" onclick="closeImage()">&times;</span>
@@ -62,271 +62,71 @@
         <h2>Take a look at our collections</h2>
 
         <section class="collection-section">
-          <div class="gallery-item">
-            <h2>BREAD COLLECTION</h2>
-            <button onclick="scrollGallery(-1, 'breadGallery')">&#10094;</button>
-            <img src="../assets/Images/Sourdough Bread.jpg" alt="Sourdough Bread">
-            <img src="../assets/Images/Baguette.jpg" alt="Baguette">
-          </div>
-        <div class="gallery-item">
-          <h3>Pastry Collection</h3>
-          <img src="../assets/Images/Croissant.jpeg" alt="Croissant">
-          <img src="../assets/Images/Danish.jpeg" alt="Danish">
-        </div>
-        <div class="gallery-item">
-          <h3>Cupcake Collection</h3>
-          <img src="../assets/Images/choclate cake.jpeg" alt="Choclate Cupcake">
-          <img src="../assets/Images/vanilla cupcake.jpg" alt="Vanilla Cupcake">
-          <img src="../assets/Images/cherrycc.jpeg" alt="Cherry Cupcake">
-          <img src="../assets/Images/cupcake.jpeg" alt="Blueberry Cupcake">
-        </div>
-        <div class="gallery-item">
-          <h3>Cake Collection</h3>
-          <img src="../assets/Images/choclate cake.jpeg" alt="">
-          <img src="../assets/Images/Lemon cake.jpeg" alt="">
-          <img src="../assets/Images/Drip cake.jpg" alt="">
-          <img src="../assets/Images/Oreo drip cake.jpg" alt="">
-          <img src="../assets/Images/goat cake.jpg" alt="">
-          <img src="../assets/Images/Pink cat cake.jpg" alt="">
-        </div>
-        <div class="gallery-item">
-          <h3>Beverage Collection</h3>
-          <img src="../assets/Images/Artisan coffee.jpeg" alt="">
-          <img src="../assets/Images/Herbal Tea.jpeg" alt="">
-        </div>
-        </section>
-        
-
-    </main>
-<script src="../assets/js/nav.js"></script>
-  <script src="../assets/js/gallery.js"></script>
-  </body>
-</html> -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sweet Crumbs Bakery | Gallery</title>
-    <link rel="stylesheet" href="../assets/css/gallery1.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <button id="menu-toggle"><i class="fas fa-bars"></i></button>
-      <ul class="menu" id="collapsed">
-        <a href="index.html">Home</a>
-        <a href="pages/about.html">About Us</a>
-        <a href="pages/menu.html">Menu</a>
-        <a href="pages/orderpage.html">Order Online</a>
-        <a href="pages/gallery.html">Gallery</a>
-        <a href="pages/events.html">Catering</a>
-        <a href="pages/contact.html">Contact Us</a>
-      </ul>
-    </nav>
-
-    <main>
-      <div id="lightbox" tabindex="-1">
-        <span class="close-btn" onclick="closeImage()">&times;</span>
-        <img id="lightbox-img" />
-      </div>
-
-      <div class="gallery-container">
-        <h1>Our Collections</h1>
-
-        <section class="collection-section">
           <h2>BREAD COLLECTION</h2>
-          <div class="gallery-wrapper">
-            <button
-              class="arrow left"
-              onclick="scrollGallery(-1, 'breadGallery')"
-            >
-              &#10094;
-            </button>
+          <div class="gallery-item">
+            <button class="arrow left" onclick="scrollGallery(-1, 'breadGallery')">&#10094;</button>
             <div class="images" id="breadGallery">
-              <img
-                src="../assets/Images/Sourdough Bread.jpg"
-                onclick="openImage('bread', 0)"
-                alt="Sourdough"
-              />
-              <img
-                src="../assets/Images/Baguette.jpg"
-                onclick="openImage('bread', 1)"
-                alt="Baguette"
-              />
+              <img src="../assets/Images/Sourdough Bread.jpg" onclick="openImage('bread', 0)" alt="Sourdough"/>
+              <img src="../assets/Images/Baguette.jpg" onclick="openImage('bread', 1)" alt="Baguette"/>
             </div>
-            <button
-              class="arrow right"
-              onclick="scrollGallery(1, 'breadGallery')"
-            >
-              &#10095;
-            </button>
+            <button class="arrow right" onclick="scrollGallery(1, 'breadGallery')">&#10095;</button>
           </div>
         </section>
 
         <section class="collection-section">
           <h2>PASTRY COLLECTION</h2>
-          <div class="gallery-wrapper">
-            <button
-              class="arrow left"
-              onclick="scrollGallery(-1, 'pastryGallery')"
-            >
-              &#10094;
-            </button>
+          <div class="gallery-item">
+            <button class="arrow left" onclick="scrollGallery(-1, 'pastryGallery')">&#10094;</button>
             <div class="images" id="pastryGallery">
-              <img
-                src="../assets/Images/Croissant.jpeg"
-                onclick="openImage('pastry', 0)"
-                alt="Croissant"
-              />
-              <img
-                src="../assets/Images/Danish.jpeg"
-                onclick="openImage('pastry', 1)"
-                alt="Danish"
-              />
+              <img src="../assets/Images/Croissant.jpeg" onclick="openImage('pastry', 0)" alt="Croissant" />
+              <img src="../assets/Images/Danish.jpeg" onclick="openImage('pastry', 1)" alt="Danish"/>
             </div>
-            <button
-              class="arrow right"
-              onclick="scrollGallery(1, 'pastryGallery')"
-            >
-              &#10095;
-            </button>
+            <button class="arrow right" onclick="scrollGallery(1, 'pastryGallery')"> &#10095;</button>
           </div>
         </section>
-
+        
         <section class="collection-section">
           <h2>CUPCAKE COLLECTION</h2>
-          <div class="gallery-wrapper">
-            <button
-              class="arrow left"
-              onclick="scrollGallery(-1, 'cupcakeGallery')"
-            >
-              &#10094;
-            </button>
-            <div class="images" id="cupcakeGallery">
-              <img
-                src="../assets/Images/choclate cake.jpeg"
-                onclick="openImage('cupcake', 0)"
-                alt="Choc"
-              />
-              <img
-                src="../assets/Images/vanilla cupcake.jpg"
-                onclick="openImage('cupcake', 1)"
-                alt="Vanilla"
-              />
-              <img
-                src="../assets/Images/cherrycc.jpeg"
-                onclick="openImage('cupcake', 2)"
-                alt="Cherry"
-              />
-              <img
-                src="../assets/Images/cupcake.jpeg"
-                onclick="openImage('cupcake', 3)"
-                alt="Cupcake"
-              />
+          <div class="gallery-item">
+            <button class="arrow left" onclick="scrollGallery(-1, 'cupcakeGallery')"> &#10094;</button>
+            <div class="images" id="cupcakeGallery"> <img src="../assets/Images/choclate cake.jpeg" onclick="openImage('cupcake', 0)" alt="Chocolate Cupcake"/>
+              <img src="../assets/Images/vanilla cupcake.jpg" onclick="openImage('cupcake', 1)" alt="Vanilla Cupcake"/>
+              <img src="../assets/Images/cherrycc.jpeg" onclick="openImage('cupcake', 2)" alt="Cherry Cupcake"/>
+              <img src="../assets/Images/cupcake.jpeg" onclick="openImage('cupcake', 3)" alt="Blueberry Cupcake"/>
             </div>
-            <button
-              class="arrow right"
-              onclick="scrollGallery(1, 'cupcakeGallery')"
-            >
-              &#10095;
-            </button>
+            <button class="arrow right" onclick="scrollGallery(1, 'cupcakeGallery')">&#10095;</button>
           </div>
         </section>
 
         <section class="collection-section">
           <h2>CAKE COLLECTION</h2>
-          <div class="gallery-wrapper">
-            <button
-              class="arrow left"
-              onclick="scrollGallery(-1, 'cakeGallery')"
-            >
-              &#10094;
-            </button>
+          <div class="gallery-item">
+            <button class="arrow left" onclick="scrollGallery(-1, 'cakeGallery')"> &#10094;</button>
             <div class="images" id="cakeGallery">
-              <img
-                src="../assets/Images/choclate cake.jpeg"
-                onclick="openImage('cake', 0)"
-                alt="Choc Cake"
-              />
-              <img
-                src="../assets/Images/Lemon cake.jpeg"
-                onclick="openImage('cake', 1)"
-                alt="Lemon"
-              />
-              <img
-                src="../assets/Images/Drip cake.jpg"
-                onclick="openImage('cake', 2)"
-                alt="Drip"
-              />
-              <img
-                src="../assets/Images/Oreo drip cake.jpg"
-                onclick="openImage('cake', 3)"
-                alt="Oreo"
-              />
-              <img
-                src="../assets/Images/goat cake.jpg"
-                onclick="openImage('cake', 4)"
-                alt="Goat"
-              />
-              <img
-                src="../assets/Images/Pink cat cake.jpg"
-                onclick="openImage('cake', 5)"
-                alt="Pink Cat"
-              />
+              <img src="../assets/Images/choclate cake.jpeg" onclick="openImage('cake', 0)" alt="Chocolate Cake"/>
+              <img src="../assets/Images/Lemon cake.jpeg" onclick="openImage('cake', 1)"alt="Lemon Cake" />
+              <img src="../assets/Images/Drip cake.jpg" onclick="openImage('cake', 2)" alt="Drip Cake"/>
+              <img src="../assets/Images/Oreo drip cake.jpg" onclick="openImage('cake', 3)" alt="Oreo Dip Cake"/>
+              <img src="../assets/Images/goat cake.jpg" onclick="openImage('cake', 4)" alt="Goat Cake"/>
+              <img src="../assets/Images/Pink cat cake.jpg" onclick="openImage('cake', 5)" alt="Pink Cat Cake"/>
             </div>
-            <button
-              class="arrow right"
-              onclick="scrollGallery(1, 'cakeGallery')"
-            >
-              &#10095;
-            </button>
+            <button class="arrow right" onclick="scrollGallery(1, 'cakeGallery')"> &#10095;</button>
           </div>
         </section>
-
-        <section class="collection-section">
-          <h2>BEVERAGE COLLECTION</h2>
-          <div class="gallery-wrapper">
-            <button
-              class="arrow left"
-              onclick="scrollGallery(-1, 'bevGallery')"
-            >
-              &#10094;
-            </button>
-            <div class="images" id="bevGallery">
-              <img
-                src="../assets/Images/Artisan coffee.jpeg"
-                onclick="openImage('beverage', 0)"
-                alt="Coffee"
-              />
-              <img
-                src="../assets/Images/Herbal Tea.jpeg"
-                onclick="openImage('beverage', 1)"
-                alt="Tea"
-              />
-            </div>
-            <button
-              class="arrow right"
-              onclick="scrollGallery(1, 'bevGallery')"
-            >
-              &#10095;
-            </button>
-          </div>
-        </section>
-      </div>
+		
+		<section class="collection-section">
+			<h2>BEVERAGE COLLECTION</h2>
+			<div class="gallery-item">
+				<button class="arrow left" onclick="scrollGallery(-1, 'bevGallery')">&#10094;</button>
+				<div class="images" id="bevGallery">
+					<img src="../assets/Images/Artisan coffee.jpeg" onclick="openImage('beverage', 0)" alt="Artisan Coffee"/>
+					<img src="../assets/Images/Herbal Tea.jpeg" onclick="openImage('beverage', 1)" alt="Herbal Tea"/>
+				</div>
+				<button class="arrow right" onclick="scrollGallery(1, 'bevGallery')">&#10095;</button>
+			</div>
+		</section>
     </main>
-
-    <footer>
-      <p>#THEBESTBAKERY | 123 Sweet Street</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-      </div>
-    </footer>
-
-    <script src="../assets/js/gallery1.js"></script>
+<script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/gallery.js"></script>
   </body>
 </html>
