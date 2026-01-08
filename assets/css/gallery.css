@@ -1,172 +1,76 @@
 /****************** Gallery ****************/
-/* .gallery-container {
-  display: flex;
-  flex-direction: column;
-}
-.gallery-item {
-  padding: 10px;
-}
-
-.gallery-item h3 {
-  color: #8c4b1a;
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.gallery-item img {
-  width: 150px;
-  max-height: 150px;
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
-}
-
-body {
-  /* Ensure this path is correct relative to the CSS file */
-  background-color: #fcf5e5;
-  color: #4a3728;
-}
-
-/* --- NAVIGATION --- */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 0; /* Hidden by default or specific width */
-  z-index: 2000;
-}
-
-#menu-toggle {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  background: #8c4b1a;
-  color: white;
-  font-size: 24px;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 2001;
-  border-radius: 5px;
-}
-
-#collapsed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 250px;
-  background-color: rgba(60, 40, 20, 0.95);
-  padding-top: 80px;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Hidden by default */
-  list-style: none;
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-}
-
-#collapsed.menu-active {
-  transform: translateX(0);
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  padding: 15px 25px;
-  font-size: 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  background: #a0522d;
-  padding-left: 35px;
-}
-
-/* --- MAIN CONTENT --- */
 main {
-  margin-left: 0; /* Standard, shifts when menu opens if desired */
-  padding: 20px;
-  transition: 0.3s;
+  background-color: #fcf5e5;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  border-radius: 200px;
+  filter: brightness(0.6);
 }
-
-h1 {
-  font-size: 40px;
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-container h1 {
+  font-size: 3rem;
   color: #8c4b1a;
   text-align: center;
-  margin: 40px 0 20px;
+  margin-top: 40px;
 }
-
-h2 {
-  font-size: 24px;
-  color: #a0522d;
-  margin-left: 50px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e8d5a8;
-  display: inline-block;
+.gallery-container h2 {
+  font-size: 2rem;
+  color: #8c4b1a;
+  text-align: center;
+  margin-bottom: 20px;
 }
-
-/* --- SLIDERS --- */
 .collection-section {
   margin-bottom: 50px;
 }
-
-.gallery-wrapper {
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
+.gallery-item {
   display: flex;
+  gap: 10px;
   align-items: center;
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
 }
 
 .images {
   display: flex;
-  overflow-x: auto;
+  overflow: auto;
   scroll-behavior: smooth;
-  gap: 15px;
+  gap: 20px;
   padding: 10px 0;
   width: 100%;
-  scrollbar-width: none; /* Firefox */
+  /* scrollbar-width: none; Firefox */
 }
-
 .images::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
 }
 
 .images img {
-  height: 250px;
+  height: 200px;
   min-width: 200px; /* Ensures they don't shrink */
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .images img:hover {
   transform: scale(1.05);
 }
-
-/* --- ARROWS --- */
+/* .gallery-item button {
+  width: 100px;
+  height: auto;
+} */
 .arrow {
   background: rgba(140, 75, 26, 0.8);
   color: white;
   border: none;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
+  padding: 5px;
+  border-radius: 30%;
   z-index: 10;
   position: absolute;
 }
-
 .arrow:hover {
   background: #8c4b1a;
 }
@@ -178,7 +82,6 @@ h2 {
   right: -20px;
 }
 
-/* --- LIGHTBOX --- */
 #lightbox {
   display: none;
   position: fixed;
@@ -218,11 +121,4 @@ h2 {
     transform: scale(1);
     opacity: 1;
   }
-}
-
-footer {
-  background-color: #e8d5a8;
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
 }
